@@ -1,0 +1,103 @@
+/* Global Styles */
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.list-of-tickets {
+  margin: 100px;
+}
+
+.ticket-table-container {
+  max-height: 400px;
+  margin-top: 20px;
+  padding-right: 15px;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.ticket-table th,
+.ticket-table td {
+  font-size: 13px;
+  padding: 8px; /* Increased padding for better readability */
+  text-align: left;
+  border-bottom: 1px solid #dac7c7;
+  min-width: 120px;
+}
+
+.ticket-table th {
+  background-color: #0361db;
+  color: white;
+  font-size: 16px;
+}
+
+.ticket-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.ticket-search-input {
+  width: 370px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  height: 35px;
+  margin-left: 100px;
+}
+
+.rc-logo {
+  max-width: 200px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 15px; /* Added spacing between navigation links */
+}
+
+.nav-links a:hover {
+  color: #d1d1d1;
+  border-bottom: 1.5px solid white;
+}
+
+.profile {
+  max-width: 24px;
+  margin-left: 15px; /* Added spacing between the profile icon and nav links */
+}
+
+.edit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 20px;
+  color: var(--color-second);
+}
+
+.edit-button:hover {
+  background-color: #007bff;
+  color: var(--color-white);
+  border-radius: 5px;
+}
+
+
+
