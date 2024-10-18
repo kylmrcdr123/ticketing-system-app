@@ -1,0 +1,112 @@
+/* src/components/EditTicketModal.css */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 90%;
+}
+
+.modal-content h2 {
+    margin-bottom: 28px;
+    font-size: 1.5rem;
+}
+
+.modal-content div {
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.modal-content button {
+    padding: 5px 15px;
+    background-color: #0a75e7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 130px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #002b58;
+}
+
+.modal-content button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.issue-text {
+    word-break: break-word; /* Ensures long words break */
+    margin-top: 5x;
+    font-size: 14px; /* Adjust font size if needed */
+    color: #333; /* Adjust text color for readability */
+  }
+
+
+  

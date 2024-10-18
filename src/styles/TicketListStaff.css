@@ -1,0 +1,96 @@
+/* Global Styles */
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+.list-of-tickets {
+  margin: 100px;
+}
+
+.ticket-table {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  min-height: 280px;
+}
+
+.ticket-table th,
+.ticket-table td {
+  word-break: break-word; /* Ensures long words break to a new line */
+  white-space: normal; /* Allows text to wrap onto the next line */
+  font-size: 13px;
+  padding: 8px; /* Increased padding for better readability */
+  text-align: left;
+  border-bottom: 1px solid #dac7c7;
+  min-width: 150px;
+
+}
+
+
+.ticket-table th {
+  height: 50px;
+  background-color: #00295c;
+  color: white;
+  font-size: 16px;
+}
+
+.ticket-table tr:hover {
+  background-color: #bdbdbd;
+}
+
+.ticket-search-input {
+  width: 370px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  height: 35px;
+  margin-left: 100px;
+}
+
+.rc-logo {
+  max-width: 200px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 15px; /* Added spacing between navigation links */
+}
+
+.nav-links a:hover {
+  color: #d1d1d1;
+  border-bottom: 1.5px solid white;
+}
+
+.profile {
+  max-width: 24px;
+  margin-left: 15px; /* Added spacing between the profile icon and nav links */
+}
+
+.edit-button {
+  background-color: transparent; /* Keeps the button background transparent by default */
+  border: none; /* Removes any default border */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for the background color */
+  font-size: 20px; /* Font size for the icon */
+  color: black; /* Default icon color */
+}
+
+.ticket-table .edit-button:hover {
+  background-color: rgb(104, 104, 104); /* Change background color to gray on hover */
+  color: white; /* Optional: Change icon color to white for contrast */
+}
