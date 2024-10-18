@@ -1,0 +1,52 @@
+.filter-component {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.search-filter {
+  flex: 1;
+}
+
+.search-input {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 350px; 
+  padding: 4px;
+  font-size: 13px;
+  border-radius: 4px;
+  background-color: #D9D9D9;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+.date-filter {
+  font-size: 13px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1vw; /* Reduced gap for more compact appearance */
+}
+
+.date-input {
+  width: 170px; /* Reduced width for smaller input */
+  padding: 3px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: #D9D9D9;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+#to {
+  font-size: 20px;
+  margin: 0 4px;
+}
+
+input:focus {
+  outline: none;
+}
