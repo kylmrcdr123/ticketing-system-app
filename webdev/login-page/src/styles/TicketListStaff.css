@@ -1,0 +1,312 @@
+/* Page Layout */
+.semi-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f3f4f6; /* Solid color background */
+  min-height: 100vh;
+}
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack filter on top of the list */
+  gap: 20px;
+}
+.list-of-tickets {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Filter and Search */
+.ticket-search-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+/* Ticket Table Container */
+.ticket-table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Allows horizontal scroll on smaller screens */
+  min-height: 300px; /* Sets a consistent height for the table container */
+}
+
+/* Ticket Table */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fefefe;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 700px; /* Ensures table fits content on smaller screens */
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  white-space: normal; /* Allow text to wrap */
+  max-width: 250px; /* Adjust max-width for better wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.ticket-table th {
+  background-color: #00295c;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ticket-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.ticket-table tr:hover {
+  background-color: #f1f3f5;
+}
+
+.ticket-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action Button */
+.edit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #00295c;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.edit-button:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Loading and Error Messages */
+.loading,
+.error {
+  color: #6c757d;
+  font-size: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.error {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Empty State Message */
+.empty-message {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensures empty message takes up full height */
+}
+
+/* Reset Button */
+.reset-button {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #ff4c4c;
+}
+
+/* Profile Image */
+.profile {
+  max-width: 24px;
+  margin-left: 15px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d1d1d1;
+  border-bottom: 1.5px solid white;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .list-of-tickets {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .ticket-search-input {
+    width: 80%;
+  }
+
+  .filter-component {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ticket-table th,
+  .ticket-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .edit-button {
+    font-size: 18px;
+  }
+}
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .list-of-tickets {
+    padding: 10px;
+  }
+
+  .filter-component {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .ticket-search-input {
+    width: 100%;
+  }
+
+  .ticket-table th,
+  .ticket-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .edit-button {
+    font-size: 16px;
+  }
+
+  .ticket-table-container {
+    overflow-x: auto;
+  }
+}
+/* General Container for Filters */
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
+/* Filter Item (Each filter dropdown) */
+.filter-item {
+  width: 100%;
+  max-width: 250px; /* Allow better layout on different screen sizes */
+}
+
+
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  margin-top: 56px;
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover and Focus States */
+.custom-dropdown:hover {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+}
+
+.custom-dropdown:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+}
+
+/* Table and Ticket List Styles */
+.ticket-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.ticket-table th, .ticket-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0056b3;
+  font-size: 18px;
+}
+
+.edit-button:hover {
+  color: #003366;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .filter-item {
+    width: 100%;
+  }
+}

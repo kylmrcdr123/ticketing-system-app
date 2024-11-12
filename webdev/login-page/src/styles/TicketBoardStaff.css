@@ -1,0 +1,230 @@
+/* Semi Body */
+.semi-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #e6e6e6;
+  background-image: linear-gradient(135deg, #f2f2f2, #dcdcdc);
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Ticket Board Container */
+.ticket-board-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Ticket Columns */
+.ticket-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+  flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+/* Individual Ticket Column */
+.ticket-column {
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 15px;
+  width: 22%;
+  min-width: 260px;
+  max-height: 80vh;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+.ticket-column:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ticket Item */
+.ticket-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.ticket-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Status Box */
+.status-box {
+  background-color: #eef1f5;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+}
+
+/* Brighter Colors for Status */
+.status-box.todo { background-color: #ffd21f; }         /* Brighter yellow */
+.status-box.inProgress { background-color: #08a6db; }   /* Brighter sky blue */
+.status-box.done { background-color: #03c92e; }         /* Brighter green */
+.status-box.close { background-color: #f80707; }        /* Brighter red-pink */
+
+/* Ticket Item Headings and Text */
+.ticket-item h5 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  font-weight: bold;
+  color: #333;
+  word-wrap: break-word;
+}
+.ticket-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 3px 0;
+}
+
+/* Ticket Item Dropdown */
+.ticket-item select {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s;
+}
+.ticket-item select:hover {
+  background-color: #f1f1f1;
+  border-color: #bbb;
+}
+
+/* Empty Message */
+.empty-message {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 16px;
+  font-style: italic;
+  min-height: 250px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+/* Main Container */
+.main-container {
+  padding: 25px;
+}
+
+/* Content Container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+}
+
+/* Responsive Design */
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .ticket-column {
+    width: 45%; /* Two columns on medium-sized screens */
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .ticket-column {
+    width: 100%; /* Single column on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .ticket-board-container {
+    height: auto; /* Allow container height to adjust on small screens */
+  }
+
+  /* Empty message should shrink */
+  .empty-message {
+    min-height: 150px; /* Adjust height for small screens */
+    padding: 15px;
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .ticket-item h5 {
+    font-size: 14px; /* Smaller heading */
+  }
+
+  .ticket-item p {
+    font-size: 12px; /* Smaller text */
+  }
+
+  .status-box {
+    font-size: 16px; /* Smaller status font */
+  }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .ticket-column {
+    width: 100%; /* Full width for each column */
+    margin-bottom: 15px;
+  }
+
+  /* Adjust paddings and margins for mobile screens */
+  .ticket-board-container {
+    padding: 15px;
+  }
+
+  .ticket-columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Further reduce font size */
+  .ticket-item h5 {
+    font-size: 12px;
+  }
+
+  .ticket-item p {
+    font-size: 10px;
+  }
+
+  .status-box {
+    font-size: 14px;
+  }
+
+  .empty-message {
+    font-size: 14px; /* Adjust font size for readability */
+    min-height: 120px;
+    padding: 10px;
+  }
+}

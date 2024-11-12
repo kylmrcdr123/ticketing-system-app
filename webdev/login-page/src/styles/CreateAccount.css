@@ -1,0 +1,116 @@
+.semi-body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: url('../assets/login.png') no-repeat center center;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 60px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content form .user-details,
+.content form .user-detailed {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.user-details .input-box input, 
+.user-detailed .input-boxs input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 7px;
+    transition: all 0.3s ease;
+}
+
+form .button {
+    height: 38px;
+    width: 80%;
+    margin-top: 5px;
+}
+
+form .button input {
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-left: 100px;
+    transition: all 0.3s ease;
+    background: #044b97;
+}
+
+form .button input:hover {
+   color: #000;
+}
+
+.error-message {
+    margin-top: 12px;
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user-details,
+.user-detailed {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+}
+
+form .user-detailed .input-boxs {
+    width: calc(33.33% - 10px);
+}
+
+form .user-details .input-box-full {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    form .user-details .input-box,
+    form .user-detailed .input-boxs {
+        width: 100%;
+    }
+}
+
+.login-link{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
