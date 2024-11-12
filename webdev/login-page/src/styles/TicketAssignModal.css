@@ -1,0 +1,175 @@
+/* Container for the Ticket Assignment section */
+.ticket-assign {
+  padding: 10px;  /* Reduced padding */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Title of the user list */
+.user-list-title {
+  font-size: 24px;  /* Reduced font size */
+  font-weight: 600;
+  margin-top: 40px;  /* Reduced top margin */
+  color: #000000;
+  text-align: center;
+}
+
+/* No users found message */
+.no-user {
+  font-size: 16px;  /* Reduced font size */
+  text-align: center;
+}
+
+/* Wrapper for the user list (to allow scrolling on smaller screens) */
+.user-list {
+  margin-top: 20px;
+  overflow-x: auto; /* Add horizontal scroll on smaller screens */
+  width: 100%; /* Ensure the wrapper takes full available width */
+  padding: 0 15px; /* Added some padding on sides for better spacing */
+}
+
+/* Table styling */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;  /* Reduced bottom margin */
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #e9e7e7;
+  table-layout: fixed;  /* Ensure all columns take equal space */
+}
+
+/* Styling for table headers and cells */
+.user-table th,
+.user-table td {
+  padding: 8px;  /* Reduced padding */
+  font-size: 0.85rem;  /* Smaller font size for table text */
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Table header styling */
+.user-table th {
+  background-color: #3792cb;
+  color: rgb(3, 3, 3);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;  /* Slightly smaller font size for headers */
+}
+
+/* Row hover effect */
+.user-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.user-table tbody tr:hover {
+  background-color: hsl(0, 0%, 55%);
+}
+
+/* Styling for table data cells */
+.user-table td {
+  border-bottom: 1px solid #b8a7a7;
+  color: #000000;
+  text-align: left;
+}
+
+/* Limiting width of the email column */
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  max-width: 220px;  /* Increase width for the email column */
+  word-break: break-word; /* Allow long words to break */
+}
+
+/* Centering contact number column */
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+  text-align: center; /* Center align contact number */
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 12px;  /* Smaller font size for error messages */
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styling for the sub-section headings */
+.list-container h3 {
+  font-size: 20px;  /* Reduced font size */
+  color: #000000;
+  margin-left: 10px;
+  margin-bottom: 10px;  /* Reduced bottom margin */
+}
+
+/* Responsive Styles */
+
+/* Mobile and Tablet Screens */
+@media (max-width: 768px) {
+  /* Title font size for smaller screens */
+  .user-list-title {
+    font-size: 20px;  /* Reduced font size */
+    margin-top: 20px;  /* Reduced top margin */
+  }
+
+  /* Table column font size adjustments for smaller screens */
+  .user-table th,
+  .user-table td {
+    font-size: 0.75rem;  /* Further reduced font size */
+    padding: 6px;  /* Reduced padding */
+  }
+
+  /* Adjust email column max width */
+  .user-table th:nth-child(2),
+  .user-table td:nth-child(2) {
+    max-width: 150px;  /* Further reduce width for smaller screens */
+  }
+
+  /* Error message font size */
+  .error-message {
+    font-size: 10px;  /* Smaller font size */
+  }
+
+  /* Adjust table width for smaller screens */
+  .user-list {
+    padding: 0 10px; /* Reduced padding */
+  }
+
+  /* Table layout adjustments */
+  .user-table {
+    table-layout: auto;  /* Allow more flexible width for columns */
+  }
+
+  /* No user message font size */
+  .no-user {
+    font-size: 14px;  /* Reduced font size */
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .user-list-title {
+    font-size: 18px;  /* Further reduced font size */
+  }
+
+  .user-table th,
+  .user-table td {
+    font-size: 0.7rem;  /* Smaller font size for very small screens */
+    padding: 4px;  /* Further reduced padding */
+  }
+
+  /* Adjust max-width of email column */
+  .user-table th:nth-child(2),
+  .user-table td:nth-child(2) {
+    max-width: 120px;  /* More reduction for email column */
+  }
+
+  .error-message {
+    font-size: 10px;  /* Smaller font size for error message */
+  }
+
+  .no-user {
+    font-size: 12px;  /* Reduced font size */
+  }
+}
